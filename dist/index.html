@@ -2,17 +2,24 @@
 <html>
   <head>
     <title>Testing Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
     <style>
+        *{
+            font-family: "Poppins";
+            font-weight: bold;
+            color:#FFF;
+        }
         main{
             width: 60%;
             margin: 0 auto;
-            background: #EFEFEF;
+            background: rgba(0, 0, 0, .2);
             padding:32px;
             box-sizing: border-box;
+            border-radius:10px;
         }
         section{
             width: 100%;
-            height: 40vh;
+            height: 70vh;
             background: rgba(0, 0, 0, .2);
             margin-bottom: 32px;
             display: -webkit-flex;
@@ -22,13 +29,23 @@
             display: flex;
             padding:32px;
             box-sizing: border-box;
+            border-radius:10px;
         }
         div{
             flex-grow: 1;
+            border-radius:10px;
             align-items: stretch;
             box-sizing: border-box;
             margin: 16px;
             background: rgba(0, 0, 0, .2);
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            justify-content: center;
+            -ms-align-items: center;
+            align-items: center;
         }
     </style>
   </head>
@@ -36,31 +53,31 @@
     <main>
         <h1>Testing Page</h1>
         <section>
-            <div class="sap sap_slideup"></div>
+            <div class="sap sap_easing_easeOutBack sap_scaleup"></div>
         </section>
         <section>
-            <div class="sap sap_slideup"></div>
-            <div class="sap sap_slideup"></div>
-            <div class="sap sap_slideup"></div>
-        </section>
-        <section>
-            <div class="sap sap_slideup"></div>
-        </section>
-        <section>
-            <div class="sap sap_slideup"></div>
-            <div class="sap sap_slideup"></div>
-            <div class="sap sap_slideup"></div>
+            <div class="sap sap_slideup">.sap<br/>.sap_slideup</div>
+            <div class="sap sap_slideup sap_delay_1">.sap<br/>.sap_slideup<br/>.sap_delay_1</div>
+            <div class="sap sap_slideup sap_delay_2">.sap<br/>.sap_slideup<br/>.sap_delay_2</div>
         </section>
         <section>
             <div class="sap sap_slideup"></div>
         </section>
         <section>
-            <div class="sap sap_slideup"></div>
-            <div class="sap sap_slideup"></div>
-            <div class="sap sap_slideup"></div>
+            <div class="sap sap_slideright"></div>
+            <div class="sap sap_slideright"></div>
+            <div class="sap sap_slideright"></div>
         </section>
         <section>
             <div class="sap sap_slideup"></div>
+        </section>
+        <section>
+            <div class="sap sap_slidedown sap_delay_1"></div>
+            <div class="sap sap_slidedown sap_delay_2"></div>
+            <div class="sap sap_slidedown sap_delay_3"></div>
+        </section>
+        <section>
+            <div class="sap sap_slideleft"></div>
         </section>
         <section>
             <div class="sap sap_slideup"></div>
@@ -73,5 +90,6 @@
             <div class="sap sap_slideup"></div>
         </section>
     </main>
-  </body>
+  <script type="text/javascript" src="sappear.min.js"></script>
+</body>
 </html>
