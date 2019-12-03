@@ -58,6 +58,7 @@ let SAppear = {
     init(obj){
         if(!this.selectors) return;
         this.selectors.forEach(elem => {
+            if(elem.classList.contains('sap_desktop') && window.innerWidth < 960) return;
             let newElem = {
                 elem:elem,
                 anim:this.animations.sap_slideup,
@@ -108,7 +109,6 @@ let SAppear = {
                         delay: newElem.delay,
                         duration:newElem.duration,
                     }
-                    console.log(animeInit);
                     for (var key in  newElem.anim.to){
                         animeInit[key] = newElem.anim.to[key];
                     }
@@ -116,7 +116,7 @@ let SAppear = {
                     observer.unobserve(newElem.elem)
                 }
               });
-            }, { rootMargin: '-100px -100px', threshold: 0.50 });
+            }, { rootMargin: '-10px -10px', threshold: 0.50 });
 
             observer.observe(newElem.elem);
         })
